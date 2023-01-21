@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gui\'s Portfolio</string>
+    <string name="home_screen_about_me">Guilherme Félix Bastos</string>
+    <string name="portfolio_button">Títulos Traduzidos</string>
+    <string name="about_app_button">Sobre o app</string>
+    <string name="home_title">Olá, mundo!</string>
+    <string name="grid_page">Títulos Traduzidos</string>
+    <string name="details_page">Detalhes</string>
+    <string name="about_app">Sobre o app</string>
+    <string name="back_button">Voltar</string>
+    <string name="about_me_info_pt">"Oi! Sou tradutor com 10 anos de experiência especializado na criação de legendas. Já trabalhei com todas as etapas do processo, de marcação de tempo à tradução. Tenho domínio na área, mas meu interesse sempre foi tecnologia, por isso, hoje me reinvento como Desenvolvedor Mobile. Desenvolvi este aplicativo para tê-lo como portfólio duplo para divulgar alguns título que traduzi e { this }. 😉 "</string>
+    <string name="title_translator">Tradutor Freelancer</string>
+    <string name="title_dev">Desenvolvedor Mobile</string>
+    <string name="about_me">Quem sou eu</string>
+    <string name="contactLinkedin">linkedin.com/in/guilherme-f-bastos/</string>
+    <string name="contactWhasApp">(34) 98828–3354</string>
+    <string name="contactEmail">guifxb@yahoo.com</string>
+    <string name="contact_info">Informações de contato</string>
+    <string name="contact">Contato</string>
+    <string name="design_about_app_title">Design</string>
+    <string name="intro_about_app_text">"  Este app nasceu da vontade de aplicar o que tenho aprendido em cursos desde que resolvi me dedicar ao desenvolvimento mobile. A ideia é ter um Portfólio/cartão de visitas que sirva para mostrar o que já fiz profissionalmente e o que aprendi como dev."</string>
+    <string name="architecture_about_app_title">Arquitetura do App</string>
+    <string name="libraries_about_app_title">Bibliotecas e APIs</string>
+    <string name="design_about_app_text">"  O app foi desenvolvido usando JetPack Compose. Uso funções Composable de vários tipos e as modifico para criar um visual limpo e direto aplicando conceitos e recursos de Material Design. O app também inclui versões em Português e Inglês."</string>
+    <string name="architecture_about_app_text">"  A arquitetura do app segue o padrão MVVM. Um viewModel gerencia o funcionamento dos fragmentos e atividades. Por exemplo, os dados passados para a tela de detalhes sobrevivem às mudanças de Lifecycle das atividades usando StateFlow. Os arquivos estão organizados no modelo de camadas, onde a camada de UI é separada da camada de dados."</string>
+    <string name="libraries_about_app_text">"  As imagens e informações na LazyGrid de títulos e na tela de detalhes são alimentadas em tempo real usando Retrofit e construídas com Coil. Ao invés de alimentar os dados de forma rígida, utilizei a API Retrofit em conjunto com a OMDb API. Os dados são gerenciados de forma assíncrona usando corrotinas para não travar a UI."</string>
+    <string name="loading_text_loading_screen">Carregando</string>
+    <string name="failed_to_load_failed_screen">Falha no carregamento</string>
+    <string name="retry_failed_screen">Tentar outra vez</string>
+</resources>

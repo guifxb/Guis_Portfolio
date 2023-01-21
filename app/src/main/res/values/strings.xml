@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Gui\'s Portfolio</string>
+    <string name="home_screen_about_me">Guilherme Félix Bastos</string>
+    <string name="portfolio_button">Translation Portfolio</string>
+    <string name="about_app_button">About this App</string>
+    <string name="home_title">Hello, World!</string>
+    <string name="grid_page">Translated Titles</string>
+    <string name="details_page">Title Details</string>
+    <string name="about_app">About This App</string>
+    <string name="back_button">Back</string>
+    <string name="about_me_info_pt">Hi! I am a translator with ten years of experience specializing in subtitle creation. Having worked with all parts of the process, from timing to translation, I have deep knowledge of the whole system. But my biggest passion has always been the tech field, so I am reinventing myself as a Mobile Developer. I have built this app as a double portfolio to display some titles I have translated and .also { this }. 😉</string>
+    <string name="title_translator">Freelance Translator</string>
+    <string name="title_dev">Mobile Developer</string>
+    <string name="about_me">About Me</string>
+    <string name="contactWhasApp">+55 (34)98828–3354</string>
+    <string name="contactLinkedin">linkedin.com/in/guilherme-f-bastos/</string>
+    <string name="contactEmail">guifxb@yahoo.com</string>
+    <string name="contact_info">Contact Information</string>
+    <string name="contact">Contact</string>
+    <string name="design_about_app_title">Design</string>
+    <string name="intro_about_app_text">"  This app was born from my urge to practice what I have learned with training courses since I decided to become a mobile developer. Its purpose is to be a portfolio/business card to display some works I have done professionally and what I have learned to use as a developer."</string>
+    <string name="architecture_about_app_title">App Architecture</string>
+    <string name="libraries_about_app_title">Libraries and APIs</string>
+    <string name="design_about_app_text">"  I have developed the app using JetPack Compose and learned how to use and modify many Composable functions to create a clean and direct style using Material design concepts and resources. The app is also available in Portuguese."</string>
+    <string name="architecture_about_app_text">"  The app Architecture follows the MVVM pattern. A ViewModel manages all fragments and activities. For instance, the data observed by the Detail Screen was built as Stateflow to survive changes in Lifecycle. I divided the Packages into the UI layer and Data Layer."</string>
+    <string name="libraries_about_app_text">"  All images and information loaded onto the Titles LazyGrid is fed in real-time using Retrofit and built with Coil. Instead of hardcoding the data, I have used Retrofit API with OMDb API. All data is managed asynchronously with coroutines to free the UI."</string>
+    <string name="loading_text_loading_screen">Loading</string>
+    <string name="failed_to_load_failed_screen">Failed to load</string>
+    <string name="retry_failed_screen">Retry</string>
+</resources>
