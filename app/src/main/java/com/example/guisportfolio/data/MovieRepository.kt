@@ -9,17 +9,14 @@ interface MovieRepository {
 }
 
 class NetworkMovieRepository(
-    private val appApiService: AppApiService
+    private val appApiService: AppApiService,
 ) : MovieRepository {
     override suspend fun getMovieInfo(): List<MovieInfo> {
         val listToReturn: MutableList<MovieInfo> = mutableListOf()
         for (movie in PortfolioData.movies) listToReturn.add(appApiService.getMovieInfo(movie))
         return listToReturn
 
-
-
-
-    }     //changed List<MovieInfo> to MovieInfo
+    }
 
 }
 

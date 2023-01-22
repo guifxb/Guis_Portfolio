@@ -23,7 +23,7 @@
     <string name="libraries_about_app_title">Libraries and APIs</string>
     <string name="design_about_app_text">"  I have developed the app using JetPack Compose and learned how to use and modify many Composable functions to create a clean and direct style using Material design concepts and resources. The app is also available in Portuguese."</string>
     <string name="architecture_about_app_text">"  The app Architecture follows the MVVM pattern. A ViewModel manages all fragments and activities. For instance, the data observed by the Detail Screen was built as Stateflow to survive changes in Lifecycle. I divided the Packages into the UI layer and Data Layer."</string>
-    <string name="libraries_about_app_text">"  All images and information loaded onto the Titles LazyGrid is fed in real-time using Retrofit and built with Coil. Instead of hardcoding the data, I have used Retrofit API with OMDb API. All data is managed asynchronously with coroutines to free the UI."</string>
+    <string name="libraries_about_app_text">"  All images and information loaded onto the Titles LazyGrid are fed in real-time using Retrofit and built with Coil. Instead of hardcoding the data, I have used Retrofit API and OMDb API. All data is managed asynchronously with coroutines to free the UI."</string>
     <string name="loading_text_loading_screen">Loading</string>
     <string name="failed_to_load_failed_screen">Failed to load</string>
     <string name="retry_failed_screen">Retry</string>

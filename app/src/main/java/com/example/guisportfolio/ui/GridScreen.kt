@@ -51,7 +51,6 @@ fun PosterCard(
     ) {
 
     Card(
-
         modifier = modifier
             .padding(4.dp)
             .fillMaxSize()

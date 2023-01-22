@@ -12,9 +12,5 @@ object PortfolioData {
         "tt0115167",
         "tt8266218",
         "tt12540080"
-
-
-
-
     )
 }

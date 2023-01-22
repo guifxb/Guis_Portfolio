@@ -8,24 +8,18 @@ import retrofit2.Retrofit
 
 interface AppContainer {
     val movieRepository: MovieRepository
-
 }
 
 
 class DefaultAppContainer : AppContainer {
+
     private val BASE_URL = "https://www.omdbapi.com"
-
-
     private val json = Json { ignoreUnknownKeys = true }
 
     //Retrofit builder
     private val retrofit: Retrofit = Retrofit.Builder()
-        .addConverterFactory(
-            json.asConverterFactory("application/json".toMediaType()))
-        .baseUrl(BASE_URL)
-        .build()
-
-
+        .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
+        .baseUrl(BASE_URL).build()
 
 
     //Retrofit service object for creating api calls

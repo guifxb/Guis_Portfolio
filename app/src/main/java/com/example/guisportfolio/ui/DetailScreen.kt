@@ -106,6 +106,7 @@ fun AnnotatedClickableText(
     val movieUrl = "https://www.imdb.com/title/${movieInfo.imdbid}/"
     val mUriHandler = LocalUriHandler.current
     val annotatedText = buildAnnotatedString {
+
         append("See on ")
         withStyle(style = SpanStyle(color = Color.Blue)) {
             appendLink("IMdb", movieUrl)

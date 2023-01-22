@@ -9,7 +9,7 @@
     <string name="details_page">Detalhes</string>
     <string name="about_app">Sobre o app</string>
     <string name="back_button">Voltar</string>
-    <string name="about_me_info_pt">"Oi! Sou tradutor com 10 anos de experiência especializado na criação de legendas. Já trabalhei com todas as etapas do processo, de marcação de tempo à tradução. Tenho domínio na área, mas meu interesse sempre foi tecnologia, por isso, hoje me reinvento como Desenvolvedor Mobile. Desenvolvi este aplicativo para tê-lo como portfólio duplo para divulgar alguns título que traduzi e { this }. 😉 "</string>
+    <string name="about_me_info_pt">"Oi! Sou tradutor com 10 anos de experiência especializado na criação de legendas. Já trabalhei com todas as etapas do processo, de marcação de tempo à tradução. Tenho domínio na área, mas meu interesse sempre foi tecnologia, por isso, hoje me reinvento como Desenvolvedor Mobile. Desenvolvi este aplicativo para tê-lo como portfólio duplo, divulgando alguns título que traduzi e { this }. 😉 "</string>
     <string name="title_translator">Tradutor Freelancer</string>
     <string name="title_dev">Desenvolvedor Mobile</string>
     <string name="about_me">Quem sou eu</string>

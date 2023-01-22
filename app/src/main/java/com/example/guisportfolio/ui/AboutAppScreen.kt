@@ -20,7 +20,6 @@ import com.example.guisportfolio.R
 @Composable
 fun AboutAppScreen(modifier: Modifier = Modifier) {
 
-
     LazyColumn(verticalArrangement = Arrangement.Top, modifier = modifier.padding(16.dp)
 
     ) {
