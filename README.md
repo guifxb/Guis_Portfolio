@@ -11,7 +11,11 @@ Personal Portfolio App to apply what I've learned with Google Android Courses.
 
 Day Mode | Dark Mode |
 --- | --- |
-![Screenshot_20230122-124435561](https://user-images.githubusercontent.com/107308140/213930167-b8e03403-fbe8-4af3-aa41-8c9ee6c31f83.jpg) | ![Screenshot_20230122-124535627](https://user-images.githubusercontent.com/107308140/213930177-5b09fe7c-0f63-4c47-b4a4-447d60517429.jpg)
+![Screenshot_20230122-124435561](https://user-images.githubusercontent.com/107308140/213932544-1a3cc2dc-709e-4a17-97e8-898fb2cdb64d.jpg) | ![Screenshot_20230122-124535627](https://user-images.githubusercontent.com/107308140/213932552-10486571-1a7a-4735-bb9d-664983e4fc65.jpg) |
+ 
+
+
+
 
 <br />
 
@@ -26,6 +30,13 @@ Day Mode | Dark Mode |
 - [OMDb API](https://www.omdbapi.com/) - The Open Movie Database. The OMDb API is a RESTful web service to obtain movie information.
 
 
+<br />
+
+## Demo
+
+![app-10mb_demo](https://user-images.githubusercontent.com/107308140/213932479-5c70caaf-7790-4409-89e7-422088c94388.gif)
+
+ 
 <br />
 
 
