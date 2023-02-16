@@ -8,7 +8,7 @@ import kotlinx.serialization.Serializable
 // Data class to define a Movie info
 
 @Serializable
-data class MovieInfo (
+data class MovieInfoNet (
     @SerialName(value = "Title")
     val title: String,
     @SerialName(value = "Year")
@@ -19,10 +19,14 @@ data class MovieInfo (
     val poster: String,
     @SerialName(value = "imdbID")
     val imdbid: String
-
     )
 
+val DefaultTitleToAdd: MovieInfoNet = MovieInfoNet("Title", "Year", "Title plot or details", "https://via.placeholder.com/250x150/FFFFFF/000000/?text=Poster", "tt1285016")
 
-val DefaultMovie: MovieInfo = MovieInfo("Samambaia", "1999", "Loucuras por loucos enlouquecidos", "https://m.media-amazon.com/images/M/MV5BOGUyZDUxZjEtMmIzMC00MzlmLTg4MGItZWJmMzBhZjE0Mjc1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg", "tt1285016")
+val BrokenTitle: MovieInfoNet = MovieInfoNet("Something is broken here", "RIGHT NOW", "It seems that there was a error finding this title. It may be wrong, you may be offline or maybe there's something up with the servers. It's truly a mystery", "?", "tt1285016")
+
+
+
+
 
 

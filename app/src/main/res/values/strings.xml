@@ -18,13 +18,32 @@
     <string name="contact_info">Contact Information</string>
     <string name="contact">Contact</string>
     <string name="design_about_app_title">Design</string>
-    <string name="intro_about_app_text">"  This app was born from my urge to practice what I have learned with training courses since I decided to become a mobile developer. Its purpose is to be a portfolio/business card to display some works I have done professionally and what I have learned to use as a developer."</string>
+    <string name="intro_about_app_text">  This app was born from my urge to practice what I have learned with training courses since I decided to become a mobile developer. Its purpose is to be a portfolio/business card to display some works I have done professionally and what I have learned to use as a developer."</string>
     <string name="architecture_about_app_title">App Architecture</string>
+    <string name="database_about_app_title">Database</string>
     <string name="libraries_about_app_title">Libraries and APIs</string>
-    <string name="design_about_app_text">"  I have developed the app using JetPack Compose and learned how to use and modify many Composable functions to create a clean and direct style using Material design concepts and resources. The app is also available in Portuguese."</string>
-    <string name="architecture_about_app_text">"  The app Architecture follows the MVVM pattern. A ViewModel manages all fragments and activities. For instance, the data observed by the Detail Screen was built as Stateflow to survive changes in Lifecycle. I divided the Packages into the UI layer and Data Layer."</string>
+    <string name="design_about_app_text">  I have developed the app using JetPack Compose and learned how to use and modify many Composable functions to create a clean and direct style using Material design concepts and resources. The app is also available in Portuguese."</string>
+    <string name="architecture_about_app_text">  The app Architecture follows the MVVM pattern. A ViewModel manages all fragments and activities. For instance, the data observed by the Detail Screen was built as Stateflow to survive changes in Lifecycle. I divided the Packages into the UI layer and Data Layer."</string>
     <string name="libraries_about_app_text">"  All images and information loaded onto the Titles LazyGrid are fed in real-time using Retrofit and built with Coil. Instead of hardcoding the data, I have used Retrofit API and OMDb API. All data is managed asynchronously with coroutines to free the UI."</string>
     <string name="loading_text_loading_screen">Loading</string>
     <string name="failed_to_load_failed_screen">Failed to load</string>
     <string name="retry_failed_screen">Retry</string>
+    <string name="add_new_title">Add New Title</string>
+    <string name="database_about_app_text">By leveraging the power of the Room library, I have successfully managed a local SQLite database with ease. With this new functionality, I am able to add and delete titles within my app, making it a comprehensive platform for efficient database management.</string>
+    <string name="deleted_toast">Deleted</string>
+    <string name="add_title_content_description">Add Title</string>
+    <string name="delete_content_description">Delete</string>
+    <string name="add_title_alert_title">Add Title</string>
+    <string name="alert_confirm_text_1">"Are you sure you want to delete "</string>
+    <string name="alert_confirm_text_2">"  titles?"</string>
+    <string name="just_yes">Yes</string>
+    <string name="just_no">No</string>
+    <string name="title_save_toast">Title Saved</string>
+    <string name="title_not_found_toast">Title Not Found</string>
+    <string name="exemple_placeholder">Example: tt17527124</string>
+    <string name="search_button">Search</string>
+    <string name="save_button">Save</string>
+    <string name="delete_title_alert_title">Delete</string>
+    <string name="add_title_alert_text">"Are you sure you want to add "</string>
+
 </resources>

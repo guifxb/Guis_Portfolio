@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.guisportfolio.ui.theme.GuisPortfolioTheme
-import com.example.guisportfolio.ui.PortfolioApp
+import com.example.guisportfolio.ui.managers.PortfolioApp
 
 
 class MainActivity : ComponentActivity() {

@@ -1,4 +1,4 @@
-package com.example.guisportfolio.ui
+package com.example.guisportfolio.ui.screens
 
 
 import androidx.compose.foundation.layout.*
@@ -24,86 +24,78 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.example.guisportfolio.R
 import com.example.guisportfolio.model.DefaultMovie
-import com.example.guisportfolio.model.MovieInfo
+import com.example.guisportfolio.model.MovieInfoLocal
 import com.example.guisportfolio.ui.theme.GuisPortfolioTheme
 
 
 @Composable
 fun DetailScreen(
-    movieInfo: MovieInfo,
+    movieInfoLocal: MovieInfoLocal,
     modifier: Modifier = Modifier,
 ) {
     Column {
-        PosterAndInfo(movieInfo = movieInfo)
-        PlotAndLink(movieInfo = movieInfo)
-
-
+        PosterAndInfo(movieInfoLocal = movieInfoLocal)
+        PlotAndLink(movieInfoLocal = movieInfoLocal)
     }
 }
 
-
 @Composable
 private fun PosterAndInfo(
-    movieInfo: MovieInfo,
+    movieInfoLocal: MovieInfoLocal,
     modifier: Modifier = Modifier,
 ) {
-
-
     Row {
         AsyncImage(model = ImageRequest.Builder(context = LocalContext.current)
-            .data(movieInfo.poster).crossfade(true).build(),
-            contentDescription = movieInfo.title,
+            .data(movieInfoLocal.poster).crossfade(true).build(),
+            contentDescription = movieInfoLocal.title,
             contentScale = ContentScale.FillBounds,
             error = painterResource(id = R.drawable.ic_broken_image),
             placeholder = painterResource(id = R.drawable.loading_img),
             modifier = Modifier
                 .size(200.dp, 334.dp)
                 .padding(8.dp))
-        InfoCard(movieInfo = movieInfo)
+        InfoCard(movieInfoLocal = movieInfoLocal)
     }
 }
-
 
 @Composable
 private fun InfoCard(
     modifier: Modifier = Modifier,
-    movieInfo: MovieInfo,
+    movieInfoLocal: MovieInfoLocal,
 ) {
     Column(Modifier.padding(top = 16.dp), horizontalAlignment = Alignment.Start) {
-        Text(text = movieInfo.title,
+        Text(text = movieInfoLocal.title,
             modifier = modifier.padding(top = 16.dp, start = 8.dp),
             style = MaterialTheme.typography.headlineMedium)
-        Text(text = "(${movieInfo.year})",
+        Text(text = "(${movieInfoLocal.year})",
             modifier = modifier.padding(top = 16.dp, start = 8.dp),
             style = MaterialTheme.typography.headlineSmall)
 
     }
 }
 
-
 @Composable
 fun PlotAndLink(
-    movieInfo: MovieInfo,
+    movieInfoLocal: MovieInfoLocal,
     modifier: Modifier = Modifier,
 ) {
     Column(modifier = modifier.padding(8.dp)) {
         Text(
-            text = movieInfo.plot,
+            text = movieInfoLocal.plot,
             style = MaterialTheme.typography.bodySmall,
             textAlign = TextAlign.Justify,
         )
         Spacer(modifier = Modifier.size(32.dp))
-        AnnotatedClickableText(movieInfo = movieInfo)
+        AnnotatedClickableText(movieInfoLocal = movieInfoLocal)
     }
 }
 
-
 @Composable
 fun AnnotatedClickableText(
-    movieInfo: MovieInfo,
+    movieInfoLocal: MovieInfoLocal,
     modifier: Modifier = Modifier,
 ) {
-    val movieUrl = "https://www.imdb.com/title/${movieInfo.imdbid}/"
+    val movieUrl = "https://www.imdb.com/title/${movieInfoLocal.imdbid}/"
     val mUriHandler = LocalUriHandler.current
     val annotatedText = buildAnnotatedString {
 
@@ -133,11 +125,10 @@ fun AnnotatedString.onLinkClick(offset: Int, onClick: (String) -> Unit) {
     }
 }
 
-
 @Preview(showSystemUi = true)
 @Composable
 fun DetailScreenPreview() {
     GuisPortfolioTheme() {
-        DetailScreen(movieInfo = DefaultMovie)
+        DetailScreen(movieInfoLocal = DefaultMovie)
     }
 }

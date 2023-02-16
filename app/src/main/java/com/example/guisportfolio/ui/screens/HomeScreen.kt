@@ -1,4 +1,4 @@
-package com.example.guisportfolio.ui
+package com.example.guisportfolio.ui.screens
 
 
 import androidx.annotation.StringRes
@@ -87,9 +87,7 @@ fun HomeScreen(
             style = MaterialTheme.typography.bodySmall,
             textAlign = TextAlign.Justify)
 
-
         ContactInfo()
-
 
         Row(modifier = Modifier.fillMaxWidth()) {
             Button(modifier = Modifier
@@ -100,7 +98,6 @@ fun HomeScreen(
                 onClick = onPortfolioButtonClicked) {
                 Text(stringResource(R.string.portfolio_button))
             }
-
             Button(modifier = Modifier
                 .fillMaxWidth()
                 .weight(2f)
@@ -121,7 +118,6 @@ fun ContactInfo(modifier: Modifier = Modifier) {
         modifier = modifier.padding(8.dp),
         elevation = CardDefaults.outlinedCardElevation(4.dp)
     ) {
-
         Column(
             verticalArrangement = Arrangement.SpaceEvenly,
             modifier = Modifier.animateContentSize(
@@ -131,7 +127,6 @@ fun ContactInfo(modifier: Modifier = Modifier) {
                 )
             )
         ) {
-
             Row(modifier
                 .fillMaxWidth()
                 .padding(8.dp)
@@ -156,7 +151,6 @@ fun ContactInfo(modifier: Modifier = Modifier) {
     }
 }
 
-
 @Composable
 fun InfoCard(info: ContactType) {
     Row(modifier = Modifier.padding(4.dp)) {
@@ -176,7 +170,6 @@ fun InfoCard(info: ContactType) {
         )
     }
 }
-
 
 @Composable
 private fun ContactIconButton(

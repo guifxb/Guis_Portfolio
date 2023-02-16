@@ -1,4 +1,4 @@
-package com.example.guisportfolio.ui
+package com.example.guisportfolio.ui.screens
 
 
 import androidx.annotation.StringRes
@@ -21,7 +21,6 @@ import com.example.guisportfolio.R
 fun AboutAppScreen(modifier: Modifier = Modifier) {
 
     LazyColumn(verticalArrangement = Arrangement.Top, modifier = modifier.padding(16.dp)
-
     ) {
         item {
             Row {
@@ -30,7 +29,6 @@ fun AboutAppScreen(modifier: Modifier = Modifier) {
                     painter = painterResource(id = R.drawable.android_jetpack_logo),
                     contentDescription = null)
             }
-
             Spacer(modifier = modifier.size(16.dp))
 
             TextBox(info = R.string.intro_about_app_text)
@@ -46,11 +44,13 @@ fun AboutAppScreen(modifier: Modifier = Modifier) {
             TitleBox(info = R.string.libraries_about_app_title)
             Spacer(modifier = modifier.size(8.dp))
             TextBox(info = R.string.libraries_about_app_text)
+            Spacer(modifier = modifier.size(16.dp))
+            TitleBox(info = R.string.database_about_app_title)
+            Spacer(modifier = modifier.size(8.dp))
+            TextBox(info = R.string.database_about_app_text)
         }
     }
-
 }
-
 
 @Composable
 fun TitleBox(@StringRes info: Int, modifier: Modifier = Modifier) {
@@ -65,7 +65,6 @@ fun TextBox(@StringRes info: Int, modifier: Modifier = Modifier) {
         textAlign = TextAlign.Justify,
     )
 }
-
 
 @Preview(showSystemUi = true)
 @Composable

@@ -28,4 +28,22 @@
     <string name="loading_text_loading_screen">Carregando</string>
     <string name="failed_to_load_failed_screen">Falha no carregamento</string>
     <string name="retry_failed_screen">Tentar outra vez</string>
+    <string name="add_new_title">Adicionar Título</string>
+    <string name="database_about_app_title">Banco de Dados</string>
+    <string name="database_about_app_text">Ao implementar a utilização da biblioteca Room, consegui gerenciar de maneira eficaz um banco de dados SQLite local. Com essa nova funcionalidade, pude adicionar e remover títulos diretamente em meu aplicativo.</string>
+    <string name="deleted_toast">Apagado</string>
+    <string name="add_title_content_description">Adicionar título</string>
+    <string name="delete_content_description">Deletar</string>
+    <string name="add_title_alert_title">Adicionar Título</string>
+    <string name="alert_confirm_text_1">"Tem certeza que quer apagar "</string>
+    <string name="alert_confirm_text_2">" títulos?"</string>
+    <string name="just_yes">Sim</string>
+    <string name="just_no">Não</string>
+    <string name="title_save_toast">Título salvo com sucesso</string>
+    <string name="title_not_found_toast">Não encontrado</string>
+    <string name="exemple_placeholder">Exemplo: tt17527124</string>
+    <string name="search_button">Buscar</string>
+    <string name="save_button">Salvar</string>
+    <string name="delete_title_alert_title">Apagar</string>
+    <string name="add_title_alert_text">"Tem certeza que quer adicionar "</string>
 </resources>
