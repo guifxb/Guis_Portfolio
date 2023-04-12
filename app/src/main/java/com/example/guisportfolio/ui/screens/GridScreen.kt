@@ -26,6 +26,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import coil.request.CachePolicy
 import coil.request.ImageRequest
 import com.example.guisportfolio.R
 import com.example.guisportfolio.R.drawable
@@ -42,7 +43,6 @@ fun GridScreen(
     onAddButtonClicked: () -> Unit,
     onDeleteButtonClicked: (MutableList<MovieInfoLocal>) -> Unit,
 ) {
-
     when (uiState) {
         is AppUiState.Loading -> LoadingScreen(modifier)
         is AppUiState.Success -> PosterGrid(movies = uiState.movies,
@@ -67,16 +67,15 @@ fun PosterCard(
     index: Int
 ) {
     Surface() {
-
-
         Box(modifier = Modifier
             .clip(RoundedCornerShape(16.dp))
             .clickable { onDetailsButtonClicked(movie) }
             .padding(2.dp)
         ) {
-
             AsyncImage(model = ImageRequest.Builder(LocalContext.current)
                 .data(movie.poster)
+                .memoryCachePolicy(CachePolicy.ENABLED)
+                .diskCachePolicy(CachePolicy.ENABLED)
                 .crossfade(true).build(),
                 modifier = modifier
                     .clickable { onDetailsButtonClicked(movie) }
@@ -108,7 +107,6 @@ fun PosterCard(
         }
     }
 }
-
 
 //grid composable
 @Composable
@@ -152,6 +150,7 @@ fun PosterGrid(
         horizontalAlignment = Alignment.End,
         verticalArrangement = Arrangement.Bottom,
     ) {
+
         //ADD button
         FloatingActionButton(
             onClick = onAddButtonClicked,
@@ -232,7 +231,6 @@ fun PosterGrid(
         )
     }
 }
-
 
 @Composable
 fun LoadingScreen(modifier: Modifier = Modifier) {

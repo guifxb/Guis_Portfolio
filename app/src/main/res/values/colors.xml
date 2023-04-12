@@ -10,10 +10,11 @@
     <color name="md_theme_light_secondary">#4D616C</color>
     <color name="md_theme_light_onSecondary">#FFFFFF</color>
     <color name="md_theme_light_secondaryContainer">#D0E6F2</color>
+    <color name="pdf_background">#E0E0E0</color>
     <color name="md_theme_light_onSecondaryContainer">#081E27</color>
     <color name="md_theme_light_tertiary">#5D5B7D</color>
     <color name="md_theme_light_onTertiary">#FFFFFF</color>
-    <color name="md_theme_light_tertiaryContainer">#E3DFFF</color>
+    <color name="md_theme_light_tertiaryContainer">#ECEFF1</color>
     <color name="md_theme_light_onTertiaryContainer">#1A1836</color>
     <color name="md_theme_light_error">#BA1A1A</color>
     <color name="md_theme_light_errorContainer">#FFDAD6</color>

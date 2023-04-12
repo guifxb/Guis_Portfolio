@@ -8,7 +8,7 @@
     <string name="details_page">Title Details</string>
     <string name="about_app">About This App</string>
     <string name="back_button">Back</string>
-    <string name="about_me_info_pt">Hi! I am a translator with ten years of experience specializing in subtitle creation. Having worked with all parts of the process, from timing to translation, I have deep knowledge of the whole system. But my biggest passion has always been the tech field, so I am reinventing myself as a Mobile Developer. I have built this app as a double portfolio to display some titles I have translated and .also { this }. 😉</string>
+    <string name="about_me_info">Hi! I am a translator with ten years of experience specializing in subtitle creation. Having worked with all parts of the process, from timing to translation, I have deep knowledge of the whole system. But my biggest passion has always been the tech field, so I am reinventing myself as a Mobile Developer. I have built this app as a double portfolio to display some titles I have translated .also { this }. 😉</string>
     <string name="title_translator">Freelance Translator</string>
     <string name="title_dev">Mobile Developer</string>
     <string name="about_me">About Me</string>
@@ -45,5 +45,9 @@
     <string name="save_button">Save</string>
     <string name="delete_title_alert_title">Delete</string>
     <string name="add_title_alert_text">"Are you sure you want to add "</string>
+    <string name="empty_list_toast">Your list is empty</string>
+    <string name="pdf_created_toast">Portfolio created</string>
+    <string name="pdf_error_toast">Something wrong</string>
+    <string name="pdf_container_title">Translated and QC\'d titles</string>
 
 </resources>

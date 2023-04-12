@@ -35,7 +35,6 @@ fun AddTitleScreen(
     modifier: Modifier = Modifier,
     onSearchButtonClicked: (String) -> Unit,
     onAddButtonClicked: () -> Unit,
-
     ) {
     Column(modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.Top) {
@@ -47,7 +46,6 @@ fun AddTitleScreen(
             onAddButtonClicked = onAddButtonClicked)
     }
 }
-
 
 @Composable
 private fun PosterAndInfo(
@@ -68,7 +66,6 @@ private fun PosterAndInfo(
     }
 }
 
-
 @Composable
 private fun InfoCard(
     modifier: Modifier = Modifier,
@@ -85,7 +82,6 @@ private fun InfoCard(
             style = MaterialTheme.typography.headlineSmall)
     }
 }
-
 
 @Composable
 fun Plot(

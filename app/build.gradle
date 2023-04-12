@@ -4,7 +4,6 @@ plugins {
     id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.0'
     id 'com.google.devtools.ksp' version '1.8.0-1.0.8'
     id "org.jetbrains.kotlin.kapt"
-
 }
 
 android {
@@ -17,11 +16,8 @@ android {
         targetSdk 33
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary true
-        }
+        vectorDrawables.useSupportLibrary true
     }
 
     buildTypes {
@@ -77,18 +73,15 @@ dependencies {
     // Room
     implementation "androidx.room:room-runtime:2.5.0"
     implementation "androidx.room:room-ktx:2.5.0"
+    implementation 'androidx.core:core-ktx:1.9.0'
     kapt "androidx.room:room-compiler:2.5.0"
 
     // Testing
     testImplementation 'junit:junit:4.13.2'
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-    testImplementation 'org.junit.jupiter:junit-jupiter'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
-
-
-
 }
+

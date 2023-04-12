@@ -1,16 +1,20 @@
 package com.example.guisportfolio.ui.managers
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.NavigateBefore
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
@@ -19,6 +23,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.guisportfolio.R
+import com.example.guisportfolio.pdfmanager.PdfController
 import com.example.guisportfolio.ui.screens.*
 
 
@@ -30,7 +35,8 @@ enum class AppScreen(@StringRes val title: Int) {
     AddTitleScreen(title = R.string.add_new_title)
 }
 
-
+//Top AppBar
+@RequiresApi(Build.VERSION_CODES.M)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AppBar(
@@ -38,29 +44,39 @@ fun AppBar(
     canNavigateBack: Boolean,
     navigateUp: () -> Unit,
     modifier: Modifier = Modifier,
-) {
-    CenterAlignedTopAppBar(
-
-        title = { Text(stringResource(currentScreen.title)) },
+    uiState: AppUiState,
+    ) {
+    val context = LocalContext.current
+    CenterAlignedTopAppBar(title = { Text(stringResource(currentScreen.title)) },
         modifier = modifier,
         navigationIcon = {
             if (canNavigateBack) {
                 IconButton(onClick = navigateUp) {
-                    Icon(imageVector = Icons.Filled.ArrowBack,
-                        contentDescription = stringResource(R.string.back_button))
+                    Icon(
+                        imageVector = Icons.Filled.NavigateBefore,
+                        contentDescription = stringResource(R.string.back_button)
+                    )
+                }
+            }
+        },
+        actions = {
+            // RowScope here, so these icons will be placed horizontally
+            if (currentScreen.name == AppScreen.Grid.name) {
+                IconButton(onClick = { PdfController().generatePDF(context, uiState) }) {
+                    Icon(Icons.Filled.Share, contentDescription = "Share")
                 }
             }
         })
 }
 
-
+//NavController
+@RequiresApi(Build.VERSION_CODES.M)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PortfolioApp(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
 ) {
-
     // Get current back stack entry
     val backStackEntry by navController.currentBackStackEntryAsState()
 
@@ -72,28 +88,29 @@ fun PortfolioApp(
     val onlineViewModel: OnlineViewModel = viewModel(factory = OnlineViewModel.Factory)
 
     Scaffold(modifier = modifier.fillMaxSize(), topBar = {
-        AppBar(currentScreen = currentScreen,
+        AppBar(
+            currentScreen = currentScreen,
             canNavigateBack = navController.previousBackStackEntry != null,
-            navigateUp = { navController.navigateUp() })
-    }
-    ) {
-        Surface(modifier = modifier
-            .fillMaxSize()
-            .padding(it)) {
-
+            navigateUp = { navController.navigateUp() },
+            uiState = onlineViewModel.uiState
+        )
+    }) {
+        Surface(
+            modifier = modifier
+                .fillMaxSize()
+                .padding(it)
+        ) {
             NavHost(navController = navController, startDestination = AppScreen.Start.name) {
                 composable(route = AppScreen.Start.name) {
                     HomeScreen(onAboutButtonClicked = {
                         navController.navigate(AppScreen.AboutApp.name)
                     }, onPortfolioButtonClicked = {
                         navController.navigate(AppScreen.Grid.name)
-                    }
-                    )
+                    })
                 }
 
                 composable(route = AppScreen.Grid.name) {
-                    GridScreen(
-                        uiState = onlineViewModel.uiState,
+                    GridScreen(uiState = onlineViewModel.uiState,
                         retryAction = onlineViewModel::getMovieInfo,
                         onDetailsButtonClicked = {
                             onlineViewModel.updateCurrentMovie(it)
@@ -104,8 +121,7 @@ fun PortfolioApp(
                         },
                         onDeleteButtonClicked = {
                             onlineViewModel.deleteTitle(it)
-                        }
-                    )
+                        })
                 }
 
                 composable(route = AppScreen.Details.name) {
@@ -119,18 +135,13 @@ fun PortfolioApp(
 
                 composable(route = AppScreen.AddTitleScreen.name) {
                     val state = onlineViewModel.addTitleCurrentMovie.collectAsState()
-                    AddTitleScreen(
-                        addTitleCurrentMovie = state.value,
-                        onSearchButtonClicked = {
-                            onlineViewModel.getTitleToAdd(it)
-                        }
-                    ) {
+                    AddTitleScreen(addTitleCurrentMovie = state.value, onSearchButtonClicked = {
+                        onlineViewModel.getTitleToAdd(it)
+                    }) {
                         onlineViewModel.addTitle()
                     }
                 }
             }
         }
     }
-
 }
-

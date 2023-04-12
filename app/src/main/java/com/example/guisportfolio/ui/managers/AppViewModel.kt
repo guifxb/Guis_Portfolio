@@ -36,7 +36,6 @@ class OnlineViewModel(
     var uiState: AppUiState by mutableStateOf(AppUiState.Loading)
         private set
 
-
     init {
         getMovieInfo()
     }
@@ -50,16 +49,14 @@ class OnlineViewModel(
     private val _addTitleCurrentMovie = MutableStateFlow(DefaultTitleToAdd)
     val addTitleCurrentMovie: StateFlow<MovieInfoNet> = _addTitleCurrentMovie.asStateFlow()
 
-
-
-
+    //This is used in details page
     fun updateCurrentMovie(movieInfoLocal: MovieInfoLocal) {
         _currentMovie.update {
             movieInfoLocal
         }
     }
 
-
+    //Getting titles from online API
     fun getTitleToAdd(idToAdd: String) {
         viewModelScope.launch {
             val titleToAdd = try {
@@ -79,6 +76,7 @@ class OnlineViewModel(
         }
     }
 
+    //Saving titles locally
     fun addTitle() {
         viewModelScope.launch {
             movieRepositoryLocal.insertItem(_addTitleCurrentMovie.value.toMovieInfoLocal())
@@ -98,11 +96,6 @@ class OnlineViewModel(
             getMovieInfo()
         }
     }
-
-
-
-
-
 
     fun getMovieInfo() {
         viewModelScope.launch {
@@ -125,9 +118,6 @@ class OnlineViewModel(
         }
     }
 
-
-
-
     companion object {
         val Factory: ViewModelProvider.Factory = viewModelFactory {
             initializer {
@@ -141,11 +131,3 @@ class OnlineViewModel(
     }
 }
 
-
-fun MovieInfoNet.toMovieInfoLocal(): MovieInfoLocal = MovieInfoLocal(
-    title = title,
-    year = year,
-    plot = plot,
-    poster = poster,
-    imdbid = imdbid
-)

@@ -119,12 +119,6 @@ fun AnnotatedString.Builder.appendLink(linkText: String, linkUrl: String) {
     pop()
 }
 
-fun AnnotatedString.onLinkClick(offset: Int, onClick: (String) -> Unit) {
-    getStringAnnotations(start = offset, end = offset).firstOrNull()?.let {
-        onClick(it.item)
-    }
-}
-
 @Preview(showSystemUi = true)
 @Composable
 fun DetailScreenPreview() {

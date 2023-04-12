@@ -5,9 +5,9 @@ import com.example.guisportfolio.model.MovieInfoLocal
 import kotlinx.coroutines.flow.Flow
 
 
+//DAO for managing the local Database
 @Dao
 interface MovieDao {
-
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(movieInfoLocal: MovieInfoLocal)
@@ -23,6 +23,5 @@ interface MovieDao {
 
     @Query("SELECT * from movies ORDER BY title ASC")
     fun getAllItems(): Flow<List<MovieInfoLocal>>
-
 
 }

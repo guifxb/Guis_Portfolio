@@ -10,8 +10,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
-import androidx.compose.material.icons.filled.ExpandLess
-import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -34,14 +32,16 @@ enum class ContactType(@StringRes val info: Int) {
     Email(info = R.string.contactEmail)
 }
 
-
 @Composable
 fun HomeScreen(
     onPortfolioButtonClicked: () -> Unit,
     onAboutButtonClicked: () -> Unit,
     modifier: Modifier = Modifier,
+
 ) {
-    Column(verticalArrangement = Arrangement.SpaceEvenly, modifier = modifier.fillMaxSize()) {
+    Column(verticalArrangement = Arrangement.SpaceEvenly, modifier = modifier
+        .fillMaxSize()
+        ) {
         Row(modifier = modifier.fillMaxWidth()) {
             Image(modifier = modifier
                 .padding(top = 16.dp, start = 16.dp)
@@ -56,7 +56,6 @@ fun HomeScreen(
                     .fillMaxWidth()
                     .fillMaxHeight(0.18f)
                     .padding(20.dp),
-
                     text = stringResource(R.string.home_screen_about_me),
                     style = MaterialTheme.typography.headlineMedium,
                     textAlign = TextAlign.Center)
@@ -83,7 +82,7 @@ fun HomeScreen(
             .fillMaxWidth()
             .padding(start = 8.dp, end = 8.dp)
             .verticalScroll(rememberScrollState()),
-            text = stringResource(R.string.about_me_info_pt),
+            text = stringResource(R.string.about_me_info),
             style = MaterialTheme.typography.bodySmall,
             textAlign = TextAlign.Justify)
 
@@ -127,9 +126,10 @@ fun ContactInfo(modifier: Modifier = Modifier) {
                 )
             )
         ) {
-            Row(modifier
-                .fillMaxWidth()
-                .padding(8.dp)
+            Row(
+                modifier
+                    .fillMaxWidth()
+                    .padding(8.dp)
 
             ) {
                 Text(
@@ -190,16 +190,15 @@ private fun ContactIconButton(
 @Composable
 fun HomeScreenPreview() {
     GuisPortfolioTheme {
-
         HomeScreen(onPortfolioButtonClicked = { }, onAboutButtonClicked = { })
     }
 }
 
-@Preview(showSystemUi = true, locale = "pt")
-@Composable
-fun HomeScreenPreviewPT() {
-    GuisPortfolioTheme {
-
-        HomeScreen(onPortfolioButtonClicked = { }, onAboutButtonClicked = { })
-    }
-}
+//@Preview(showSystemUi = true, locale = "pt")
+//@Composable
+//fun HomeScreenPreviewPT() {
+//    GuisPortfolioTheme {
+//
+//        HomeScreen(onPortfolioButtonClicked = { }, onAboutButtonClicked = { })
+//    }
+//}

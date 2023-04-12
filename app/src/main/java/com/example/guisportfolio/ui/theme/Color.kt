@@ -63,7 +63,7 @@ val md_theme_dark_surfaceTint = Color(0xFF69D3FF)
 val md_theme_dark_outlineVariant = Color(0xFF40484C)
 val md_theme_dark_scrim = Color(0xFF000000)
 
-
+val pdf_background = Color(0xFFEEEEEE)
 val seed = Color(0xFF0094BE)
 val CustomColor1 = Color(0xFF084248)
 val light_CustomColor1 = Color(0xFF006972)

@@ -14,36 +14,30 @@ interface AppContainer {
     val movieRepositoryLocal: MovieRepositoryLocal
 }
 
-
 class DefaultAppContainer(private val context: Context) : AppContainer {
 
     private val BASE_URL = "https://www.omdbapi.com"
     private val json = Json { ignoreUnknownKeys = true }
 
+    //Online Repository
+    override val movieRepository: MovieRepository by lazy {
+        NetworkMovieRepository(retrofitService)
+    }
+
+    //Local Repository
     override val movieRepositoryLocal: MovieRepositoryLocal by lazy {
         MovieRepositoryOffline(MovieDatabase.getDatabase(context).movieDao())
     }
-
-
 
     //Retrofit builder
     @OptIn(ExperimentalSerializationApi::class)
     private val retrofit: Retrofit = Retrofit.Builder()
         .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
-        .baseUrl(BASE_URL).build()
+        .baseUrl(BASE_URL)
+        .build()
 
     //Retrofit service object for creating api calls
     private val retrofitService: AppApiService by lazy {
         retrofit.create(AppApiService::class.java)
     }
-
-    override val movieRepository: MovieRepository by lazy {
-        NetworkMovieRepository(retrofitService)
-    }
-
-
-
-
-
-
 }

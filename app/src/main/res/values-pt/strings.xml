@@ -9,7 +9,7 @@
     <string name="details_page">Detalhes</string>
     <string name="about_app">Sobre o app</string>
     <string name="back_button">Voltar</string>
-    <string name="about_me_info_pt">"Oi! Sou tradutor com 10 anos de experiência especializado na criação de legendas. Já trabalhei com todas as etapas do processo, de marcação de tempo à tradução. Tenho domínio na área, mas meu interesse sempre foi tecnologia, por isso, hoje me reinvento como Desenvolvedor Mobile. Desenvolvi este aplicativo para tê-lo como portfólio duplo, divulgando alguns título que traduzi e { this }. 😉 "</string>
+    <string name="about_me_info">"Oi! Sou tradutor com 10 anos de experiência especializado na criação de legendas. Já trabalhei com todas as etapas do processo, de marcação de tempo à tradução. Tenho domínio na área, mas meu interesse sempre foi tecnologia, por isso, hoje me reinvento como Desenvolvedor Mobile. Desenvolvi este aplicativo para tê-lo como portfólio duplo, divulgando alguns título que traduzi e { this }. 😉 "</string>
     <string name="title_translator">Tradutor Freelancer</string>
     <string name="title_dev">Desenvolvedor Mobile</string>
     <string name="about_me">Quem sou eu</string>
@@ -46,4 +46,8 @@
     <string name="save_button">Salvar</string>
     <string name="delete_title_alert_title">Apagar</string>
     <string name="add_title_alert_text">"Tem certeza que quer adicionar "</string>
+    <string name="empty_list_toast">Sua lista está vazia.</string>
+    <string name="pdf_created_toast">O portfólio foi criado corretamente.</string>
+    <string name="pdf_error_toast">Algo errado aconteceu.</string>
+    <string name="pdf_container_title">Títulos traduzidos e QC</string>
 </resources>
