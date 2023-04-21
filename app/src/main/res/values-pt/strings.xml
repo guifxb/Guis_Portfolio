@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Gui\'s Portfolio</string>
+    <string name="app_name">Translator\'s Portfolio</string>
     <string name="home_screen_about_me">Guilherme Félix Bastos</string>
     <string name="portfolio_button">Títulos Traduzidos</string>
     <string name="about_app_button">Sobre o app</string>

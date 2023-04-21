@@ -19,7 +19,7 @@
         tools:targetApi="33">
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.example.guisportfolio.fileprovider"
+            android:authorities="com.example.translatorsportfolio.fileprovider"
             android:grantUriPermissions="true"
             android:exported="false">
             <meta-data
@@ -29,7 +29,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.GuisPortfolio">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
